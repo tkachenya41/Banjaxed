@@ -1,0 +1,836 @@
+@import url(./reset.css);
+/* alata-regular - latin */
+@font-face {
+  font-family: "Alata";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/alata-v9-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/alata-v9-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body {
+  box-sizing: border-box;
+}
+._container {
+  max-width: 1504px;
+  margin: 0 auto;
+}
+._container-2 {
+  max-width: 1206px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+._container-3 {
+  max-width: 1272px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.watch {
+  margin-left: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.first__link {
+  margin-left: 10px;
+}
+.watch::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 20px;
+  left: -20%;
+  bottom: 32%;
+  background-color: #d1d2e7;
+}
+//-----------ПЕРЕМЕННЫЕ------------------------------------------------------------
+$text: #3f415c;
+$btn: white;
+$head: #1a1a29;
+//------------ШАБЛОНЫ--------------------------------------------------------------
+%first__btn {
+  padding: 21px 48px;
+  color: $btn;
+  text-align: center;
+  background: #6670ee;
+  border: 2px solid #6670ee;
+  box-shadow: 0px 12px 30px rgba(14, 68, 152, 0.15);
+  border-radius: 12px;
+}
+//------------МИКСИНЫ--------------------------------------------------------------
+@mixin font($ff, $fw, $fs, $ln, $c) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $ln;
+  color: $c;
+}
+//-----------First Block------------------------------------------------------------
+
+.header {
+  @include font("Hepta Slab", 300, calc(10px + 0.2vw), 27px, $text);
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  justify-content: space-between;
+  margin-top: calc((30px / 1503px) * 100%);
+  min-height: 92px;
+  box-sizing: content-box;
+  .header-logo {
+    display: flex;
+    align-items: center;
+  }
+  .header-content {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-list {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .header-item {
+    padding-right: calc((43px / 600px) * 100%);
+  }
+  .header-link {
+  }
+  .header-socials {
+    display: flex;
+    align-items: center;
+  }
+  .header-social:not(:first-child) {
+    margin-left: 10px;
+  }
+  .header-social:not(:last-child) {
+    border: 1px solid #d1d2e7;
+    border-radius: 12px;
+    padding: calc(5px + 0.3vw);
+    max-width: 100%;
+  }
+  .header-input {
+    border: 1px solid #6670ee;
+    box-shadow: 0px 12px 19px rgba(93, 110, 171, 0.12);
+    border-radius: 12px;
+    padding: calc(8px + 0.3vw) calc(17px + 0.3vw);
+  }
+}
+.first__block {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .first__content {
+    margin-top: calc((196px / 1504px) * 100%);
+  }
+  .first__header {
+    @include font(
+      "Hepta Slab",
+      300,
+      calc(40px + 0.5vw),
+      calc(52px + 0.5vw),
+      $head
+    );
+    max-width: 615px;
+    margin-bottom: 20px;
+  }
+  .first__text {
+    @include font(
+      "Hepta Slab",
+      300,
+      calc(10px + 0.3vw),
+      calc(20px + 0.3vw),
+      $text
+    );
+    max-width: 608px;
+  }
+  .first__btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc((99px / 1504px) * 100%);
+  }
+  .first__btn {
+    @extend %first__btn;
+  }
+  .first__images {
+    position: relative;
+    padding-left: calc((713px / 1504px) * 100%);
+    padding-bottom: calc((831px / 1504px) * 100%);
+    margin-top: 50px;
+    background: url(../img/Subtract.svg) center top / 80% no-repeat;
+  }
+  .first-square {
+    position: absolute;
+    background: url(../img/square.svg) left top / contain no-repeat;
+    width: 28%;
+    height: 24%;
+    left: 0;
+    top: -5%;
+  }
+  .first-dots {
+    position: absolute;
+    background: url(../img/dots.svg) left bottom / cover no-repeat;
+    width: 50%;
+    height: 50%;
+    left: -8%;
+    bottom: 8%;
+    z-index: -1;
+  }
+}
+//-----------Second Block------------------------------------------------
+.second__block {
+  padding-bottom: calc((121px / 1206px) * 100%);
+  border-bottom: 1px solid #e0e2fc;
+  .second__header {
+    max-width: 610px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: calc((17px / 1504px) * 100%);
+    @include font(
+      "Hepta Slab",
+      700,
+      calc(20px + 0.5vw),
+      calc(30px + 0.5vw),
+      $head
+    );
+  }
+  .second__text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    @include font(
+      "Hepta Slab",
+      300,
+      calc(12px + 0.3vw),
+      calc(18px + 0.3vw),
+      $text
+    );
+  }
+  .second__text strong {
+    color: #6670ee;
+  }
+  .second__content {
+    background: url(../img/Vector.svg) center 120px no-repeat,
+      url(https://www.banjaxed.com/wp-content/themes/banjaxed/assets/images/salesforce-img.png)
+        center 60px no-repeat;
+  }
+
+  .second__content-header {
+    min-width: 285px;
+    @include font(
+      "Hepta Slab",
+      500,
+      calc(14px + 0.4vw),
+      calc(17px + 0.5vw),
+      $head
+    );
+    margin-bottom: 12px;
+  }
+  .second__content-text {
+    max-width: 285px;
+    @include font(
+      "Hepta Slab",
+      300,
+      calc(9px + 0.3vw),
+      calc(16px + 0.3vw),
+      $text
+    );
+  }
+  .second__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .second-management,
+  .second-development,
+  .second-admin,
+  .second-architecture {
+    display: flex;
+    flex: 1;
+  }
+  .second-management,
+  .second-development {
+    margin-bottom: 70px;
+  }
+  .second-architecture,
+  .second-development {
+    justify-content: end;
+  }
+  .second__text-block {
+    position: relative;
+    top: 90px;
+  }
+}
+//---------------------------Third Block-----------------------------------------------------
+.third__block {
+  margin: calc((65px / 1272px) * 100%) auto calc((120px / 1272px) * 100%) auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .third-text {
+    max-width: 822px;
+    @include font(
+      "Hepta Slab",
+      300,
+      calc(25px + 0.3vw),
+      calc(33px + 0.4vw),
+      $text
+    );
+  }
+  .third-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 25%;
+  }
+  .column1,
+  .column3,
+  .column2 {
+    max-width: 302px;
+    flex: 1 1 100%;
+    @include font("Hepta Slab", 300, calc(15px + 0.1vw), calc(20px + 0.1vw), 0);
+    padding: 30px 160px 29px 81px;
+    background: #ffffff;
+    border: 1px solid #ff619a;
+    border-radius: 10px;
+    background: url(../img/health.svg) 25px center no-repeat;
+  }
+  .column1 {
+    color: #f95993;
+  }
+  .column2 {
+    color: #ffa901;
+    border: 1px solid #ffb800;
+    background: url(../img/law.svg) 25px center no-repeat;
+  }
+  .column3 {
+    color: #5ec697;
+    border: 1px solid #7fc6a6;
+    background: url(../img/education.svg) 25px center no-repeat;
+  }
+}
+._container {
+  padding: 0 30px;
+  .fourth__block {
+    background: url(../img/Conversations.svg) 97% 2% no-repeat;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    border: 1px solid #d1d4fa;
+    box-shadow: 0px 12px 30px rgba(14, 68, 152, 0.15);
+    border-radius: 40px;
+    .fourth__content {
+      margin: calc((87px / 1504px) * 100%) calc((63px / 1504px) * 100%)
+        calc((101px / 1504px) * 100%) calc((63px / 1504px) * 100%);
+    }
+    .fourth-header {
+      margin-bottom: 15px;
+      @include font(
+        "Hepta Slab",
+        600,
+        calc(20px + 0.5vw),
+        calc(25px + 0.5vw),
+        $head
+      );
+    }
+    .fourth-text {
+      margin-bottom: 32px;
+      max-width: 425px;
+      @include font(
+        "Hepta Slab",
+        300,
+        calc(8px + 0.3vw),
+        calc(18px + 0.3vw),
+        $text
+      );
+    }
+    .fourth-list {
+      margin-bottom: 57px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      @include font(
+        "Hepta Slab",
+        600,
+        calc(10px + 0.1vw),
+        calc(12px + 0.1vw),
+        $head
+      );
+    }
+    .fourth-item-conversation {
+      background: url(../img/conversation.svg) left top no-repeat;
+      padding: 5px 0 0 38px;
+    }
+    .fourth-item-docrio {
+      background: url(../img/docrio.svg) left top no-repeat;
+      padding: 5px 0 0 38px;
+    }
+    .fourth-item-feature {
+      background: url(../img/feature.svg) left top no-repeat;
+      padding: 4px 0 0 38px;
+    }
+    .first__btn {
+      @extend %first__btn;
+    }
+    .first__btns {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .fourth-bg {
+      background: url(../img/smaill__frame.svg) right top / 50% 85% no-repeat,
+        url(../img/big_frame.svg) center bottom / 80% no-repeat,
+        url(../img/planet.svg) right -30px / contain no-repeat;
+      padding-bottom: calc((596px / 1504px) * 100%);
+      padding-right: calc((883px / 1504px) * 100%);
+    }
+  }
+  .fifth__block {
+    margin: calc((40px / 1504px) * 100%) 0 calc((74px / 1504px) * 100%) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    .average__page {
+      max-height: 318px;
+      flex: 0 1 auto;
+      padding: calc((31px / 1504px) * 100%) calc((31px / 1504px) * 100%)
+        calc((61px / 1504px) * 100%) calc((65px / 1504px) * 100%);
+
+      background-color: #ffffff;
+      border: 1px solid #d1d2e7;
+      border-radius: 40px;
+    }
+    .average-list {
+      padding: calc((18px / 350px) * 100%) calc((50px / 350px) * 100%) 0 0;
+      background: url(../img/average.svg) 95.7% 7% no-repeat,
+        url(../img/round.svg) right top no-repeat;
+      @include font(
+        "Hepta Slab",
+        400,
+        calc(20px + 0.3vw),
+        calc(24px + 0.3vw),
+        $text
+      );
+    }
+    .average-item:first-child {
+      margin-top: calc(20px / 404px) * 100%;
+    }
+    .average-item {
+      @include font(
+        "Hepta Slab",
+        400,
+        calc(10px + 0.1vw),
+        calc(16px + 0.1vw),
+        $text
+      );
+    }
+    .exceptional__page {
+      max-width: 1030px;
+      max-height: 318px;
+      flex: 2 1 auto;
+      display: flex;
+      min-width: 670px;
+      background: #6670ee;
+      border-radius: 30px;
+    }
+    .exceptional-list {
+      padding: calc((53px / 855px) * 100%) 0 calc((40px / 855px) * 100%)
+        calc((79px / 855px) * 100%);
+      @include font(
+        "Hepta Slab",
+        400,
+        calc(20px + 0.3vw),
+        calc(24px + 0.3vw),
+        $btn
+      );
+    }
+    .exceptional-item {
+      @include font(
+        "Hepta Slab",
+        400,
+        calc(10px + 0.1vw),
+        calc(16px + 0.1vw),
+        $btn
+      );
+    }
+    .exceptional-item:first-child {
+      margin-top: calc(20px / 804px) * 100%;
+    }
+    .exc-btn {
+      margin-top: 36px;
+      border: 1px solid #ffffff;
+      box-shadow: 0px 12px 30px rgba(14, 68, 152, 0.15);
+      border-radius: 8px;
+      background-color: #ffffff;
+      padding: calc((12px / 340px) * 100%) calc((45px / 340px) * 100%);
+      @include font(
+        "Hepta Slab",
+        400,
+        calc(10px + 0.1vw),
+        calc(16px + 0.1vw),
+        #3f415c
+      );
+    }
+    .exceptional-bg {
+      display: flex;
+      padding: 0 calc((673px / 1030px) * 100%) calc((318px / 1030px) * 100%) 0;
+      background: url(../img/exceptional.svg) right bottom/ contain no-repeat,
+        url(../img/exceptional-bg.svg) right bottom/ contain no-repeat;
+    }
+  }
+  .sixth__block {
+    .sixth__header {
+      text-align: center;
+      margin-bottom: 10px;
+      @include font(
+        "Hepta Slab",
+        600,
+        calc(10px + 0.1vw),
+        calc(12px + 0.1vw),
+        #6670ee
+      );
+    }
+    .sixth__main-header {
+      margin-bottom: 50px;
+      text-align: center;
+      @include font(
+        "Hepta Slab",
+        700,
+        calc(20px + 0.5vw),
+        calc(25px + 0.5vw),
+        $head
+      );
+    }
+    .sixth {
+      display: flex;
+      justify-content: space-between;
+    }
+    .sixth__solutions {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 134px;
+      background: url(../img/innovative.svg) left 30% no-repeat,
+        url(../img/micro.svg) -1% 45% no-repeat;
+    }
+    .sixth__automations {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 154px;
+      background: url(../img/automations-bg.svg) left 40% no-repeat;
+    }
+    .sixth__navigating {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 134px;
+      background: url(../img/navigating-bg.svg) left 45% no-repeat;
+    }
+    .sixth-header {
+      @include font(
+        "Hepta Slab",
+        600,
+        calc(16px + 0.3vw),
+        calc(32px + 0.3vw),
+        $head
+      );
+    }
+    .sixth-text {
+      max-width: 450px;
+      @include font(
+        "Hepta Slab",
+        300,
+        calc(12px + 0.3vw),
+        calc(18px + 0.3vw),
+        $text
+      );
+    }
+    .sixth__scheme {
+      width: 40%;
+    }
+    .first__btn {
+      @extend %first__btn;
+      display: flex;
+      margin: calc((50px / 1504px) * 100%) auto calc((132px / 1504px) * 100%)
+        auto;
+    }
+  }
+  .seventh__block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .seventh__header {
+      padding-top: calc((108.4px / 1504px) * 100%);
+      background: url(../img/quotes.svg) left top no-repeat;
+      max-width: 400px;
+      @include font(
+        "Hepta Slab",
+        400,
+        calc(20px + 1vw),
+        calc(25px + 1vw),
+        $text
+      );
+    }
+    .seventh__feedback {
+      background: #ffffff;
+      border: 1px solid #e8e8f3;
+      border-radius: 32px;
+      max-width: 544px;
+      padding: 0 calc((51px / 1504px) * 100%) calc((54px / 1504px) * 100%)
+        calc((49px / 1504px) * 100%);
+    }
+    .feedback__author {
+      background: url(../img/stars.svg) left center/ 45% no-repeat;
+      padding-top: calc((137px / 544px) * 100%);
+      @include font(
+        "Hepta Slab",
+        700,
+        calc(16px + 0.1vw),
+        calc(19px + 0.1vw),
+        $head
+      );
+    }
+    .feedback__author-position {
+      margin-bottom: calc((21px / 544px) * 100%);
+      @include font(
+        "Hepta Slab",
+        400,
+        calc(10px + 0.1vw),
+        calc(12px + 0.1vw),
+        #8b8ec2
+      );
+    }
+    .feedback__text {
+      max-width: 444px;
+      @include font(
+        "Hepta Slab",
+        300,
+        calc(12px + 0.2vw),
+        calc(18px + 0.2vw),
+        $text
+      );
+    }
+  }
+  .eighth__block {
+    margin-top: calc((125px / 1504px) * 100%);
+    .eighth__header {
+      @include font(
+        "Hepta Slab",
+        700,
+        calc(24px + 0.5vw),
+        calc(30px + 0.5vw),
+        #0e2859
+      );
+    }
+    .eighth__content {
+      margin-top: calc((29px / 1504px) * 100%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .eighth__social1 {
+    }
+    .social-icon1,
+    .social-icon2,
+    .social-icon3,
+    .social-icon4,
+    .social-icon5 {
+      padding: calc((50px / 280px) * 100%) calc((42px / 280px) * 100%) 0
+        calc((42px / 280px) * 100%);
+      border-radius: 20px;
+      width: 100%;
+    }
+    .social-icon1 {
+      background-color: #ecedcb;
+    }
+    .social-icon2 {
+      background-color: #f6dfd3;
+    }
+    .social-icon3 {
+      background-color: #d3ece1;
+    }
+    .social-icon4 {
+      background-color: #b9c6ef;
+    }
+    .social-icon5 {
+      background-color: #ecd3e5;
+    }
+    .social-header {
+      margin-top: calc((17px / 260px) * 100%);
+      @include font(
+        "Hepta Slab",
+        500,
+        calc(12px + 0.2vw),
+        calc(14px + 0.2vw),
+        $head
+      );
+    }
+    .social-text {
+      @include font(
+        "Hepta Slab",
+        500,
+        calc(8px + 0.2vw),
+        calc(10px + 0.2vw),
+        #8b8ec2
+      );
+      max-width: 260px;
+    }
+  }
+  .last__block {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: calc((124px / 1504px) * 100%);
+    padding-bottom: calc((145px / 1504px) * 100%);
+    border-bottom: 1px solid #d1d2e7;
+    .last__content {
+      max-width: 634px;
+      /* margin-left: calc((161px / 1504px) * 100%); */
+    }
+    .last__bg {
+      position: absolute;
+      left: 0;
+      background: url(../img/last-bg.svg) left/cover no-repeat;
+      padding: 0 0 calc((593px / 1920px) * 100%) calc((854px / 1920px) * 100%);
+    }
+    .last__header {
+      margin-bottom: 36px;
+      @include font(
+        "Hepta Slab",
+        700,
+        calc(16px + 0.6vw),
+        calc(32px + 0.6vw),
+        $head
+      );
+    }
+    .last__form {
+      max-width: 610px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+    .last__form input {
+      flex: 1 1 48%;
+      @include font(
+        "Hepta Slab",
+        500,
+        calc(8px + 0.1vw),
+        calc(10px + 0.1vw),
+        #7274a0
+      );
+      background: #ffffff;
+      border: 1px solid #dcdded;
+      border-radius: 8px;
+      padding: 23px 10px;
+    }
+    input[type="button"] {
+      padding: 23px 30px;
+      background: url(../img/last-btn.svg) 20% center no-repeat;
+      background-color: #6670ee;
+      border-radius: 12px;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      flex: 1;
+    }
+    input[type="number"] {
+      padding: 23px 48px;
+      background: url(../img/america.svg) 3% center no-repeat;
+    }
+    .last__form input:nth-child(5),
+    .last__form input:nth-child(6) {
+      flex: 1 1 100%;
+    }
+    .btn-text {
+      @include font(
+        "Hepta Slab",
+        500,
+        calc(12px + 0.1vw),
+        calc(12px + 0.1vw),
+        #7274a0
+      );
+    }
+    .last__form input:nth-child(6) {
+      margin-bottom: calc((51px / 610px) * 100%);
+    }
+  }
+  .footer {
+    padding-top: calc((26px / 1504px) * 100%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: calc((61px / 1504px) * 100%);
+    .footer__logo {
+    }
+    .footer__text {
+      align-items: center;
+      max-width: 559px;
+      @include font("Hepta Slab", 300, calc(20px + 0.4vw), 30px, $text);
+    }
+    .footer__contacts {
+    }
+    .contacts-header {
+      margin-bottom: 10px;
+      @include font(
+        "Hepta Slab",
+        600,
+        calc(14px + 0.2vw),
+        calc(25px + 0.2vw),
+        $head
+      );
+    }
+    .footer__inputs {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer__inputs label {
+      @include font(
+        "Hepta Slab",
+        500,
+        calc(12px + 0.1vw),
+        calc(20px + 0.1vw),
+        #7274a0
+      );
+    }
+    .footer__inputs input {
+      @include font(
+        "Hepta Slab",
+        500,
+        calc(12px + 0.1vw),
+        calc(20px + 0.1vw),
+        #3f415c
+      );
+    }
+    .footer__header {
+      @include font(
+        "Hepta Slab",
+        600,
+        calc(14px + 0.2vw),
+        calc(25px + 0.2vw),
+        $head
+      );
+      margin-bottom: 10px;
+    }
+    .header-socials {
+      display: flex;
+      gap: 4px;
+    }
+    .header-social {
+      padding: 10px 10px;
+      border: 1px solid #d1d2e7;
+      border-radius: 12px;
+    }
+  }
+  .last__footer {
+    .header-list {
+      display: flex;
+      justify-content: center;
+      margin-right: calc((425px / 1504px) * 100%);
+      gap: 74px;
+      @include font("Hepta Slab", 300, calc(10px + 0.2vw), 27px, $text);
+    }
+  }
+}
