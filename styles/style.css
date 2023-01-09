@@ -655,11 +655,10 @@ body {
   flex: 1;
 }
 ._container .last__block input[type=number] {
-  padding: 23px 48px;
-  background: url(../img/america.svg) 3% center no-repeat;
+  padding: 23px 48px 23px 80px;
 }
-._container .last__block .last__form input:nth-child(5),
-._container .last__block .last__form input:nth-child(6) {
+._container .last__block .last__form input:nth-of-type(5),
+._container .last__block .last__form input:nth-of-type(6) {
   flex: 1 1 100%;
 }
 ._container .last__block .btn-text {
@@ -669,8 +668,82 @@ body {
   line-height: calc(12px + 0.1vw);
   color: #7274a0;
 }
-._container .last__block .last__form input:nth-child(6) {
+._container .last__block .last__form input:nth-of-type(6) {
   margin-bottom: 8.3606557377%;
+}
+._container .last__block .last__form {
+  position: relative;
+}
+._container .last__block .last__form label {
+  font-family: "Hepta Slab";
+  font-weight: 500;
+  font-size: calc(8px + 0.1vw);
+  line-height: calc(10px + 0.1vw);
+  color: #7274a0;
+  position: absolute;
+  transform: translateY(200%);
+  background-color: #ffffff;
+  padding: 0 20px;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+._container .last__block .last-label1 {
+  top: 0;
+  left: 5px;
+}
+._container .last__block .last-label2 {
+  top: 0;
+  right: 140px;
+}
+._container .last__block .last-label3 {
+  top: 17%;
+  left: 5px;
+}
+._container .last__block .last-label4 {
+  top: 35%;
+  left: 5px;
+}
+._container .last__block .last-label5 {
+  top: 52%;
+  left: 5px;
+}
+._container .last-input:not(:-moz-placeholder-shown) + .last-label1, ._container .last-input:not(:-moz-placeholder-shown) + .last-label2, ._container .last-input:not(:-moz-placeholder-shown) + .last-label3, ._container .last-input:not(:-moz-placeholder-shown) + .last-label4, ._container .last-input:not(:-moz-placeholder-shown) + .last-label5 {
+  transform: translateY(0%);
+}
+._container .last-input:not(:-ms-input-placeholder) + .last-label1, ._container .last-input:not(:-ms-input-placeholder) + .last-label2, ._container .last-input:not(:-ms-input-placeholder) + .last-label3, ._container .last-input:not(:-ms-input-placeholder) + .last-label4, ._container .last-input:not(:-ms-input-placeholder) + .last-label5 {
+  transform: translateY(0%);
+}
+._container .last-input:focus + .last-label1,
+._container .last-input:not(:placeholder-shown) + .last-label1,
+._container .last-input:focus + .last-label2,
+._container .last-input:not(:placeholder-shown) + .last-label2,
+._container .last-input:focus + .last-label3,
+._container .last-input:not(:placeholder-shown) + .last-label3,
+._container .last-input:focus + .last-label4,
+._container .last-input:not(:placeholder-shown) + .last-label4,
+._container .last-input:focus + .last-label5,
+._container .last-input:not(:placeholder-shown) + .last-label5 {
+  transform: translateY(0%);
+}
+._container .dropdown {
+  position: absolute;
+  right: 37%;
+  top: 20%;
+}
+._container .btn {
+  --bs-btn-padding-x: 2px;
+  --bs-btn-padding-y: 8px;
+  border: none;
+  background-color: transparent;
+  color: black;
+}
+._container .btn:hover {
+  color: black;
+  background-color: transparent;
+  border-color: transparent;
+}
+._container .btn-secondary {
+  --bs-btn-active-bg: transparent;
 }
 ._container .footer {
   padding-top: 1.7287234043%;
@@ -741,4 +814,47 @@ body {
   font-size: calc(10px + 0.2vw);
   line-height: 27px;
   color: #3f415c;
+}
+._container .input__block {
+  position: relative;
+}
+._container .input__block input,
+._container .input__block label {
+  font-family: "Hepta Slab";
+  font-weight: 600;
+  font-size: calc(14px + 0.2vw);
+  line-height: calc(25px + 0.2vw);
+  color: #1a1a29;
+}
+._container .input__block input {
+  width: 300px;
+  border: 2px solid black;
+}
+._container .input__block label {
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: left center;
+  top: 50%;
+  left: 30px;
+  transition: 0.3s linear;
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #ffffff;
+  padding: 2px;
+}
+._container .input__block input:not(:-moz-placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.5) translateX(10px);
+  opacity: 1;
+}
+._container .input__block input:not(:-ms-input-placeholder) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.5) translateX(10px);
+  opacity: 1;
+}
+._container .input__block input:focus + label,
+._container .input__block input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.5) translateX(10px);
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

@@ -10,6 +10,12 @@
     />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/media.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <title>Banjaxed?</title>
   </head>
   <body>
@@ -307,12 +313,57 @@
         <div class="last__content">
           <p class="last__header">Partner With Us</p>
           <form action="" class="last__form">
-            <input type="text" placeholder="Enter Your First Name" />
-            <input type="text" placeholder="Enter Your Last Name" />
-            <input type="email" name="" id="" placeholder="Enter Your Email" />
+            <input id="name" type="text" placeholder=" " class="last-input" />
+            <label class="last-label1" for="name">Enter Your First Name</label>
+            <input id="name" class="last-input" type="text" placeholder=" " />
+            <label class="last-label2" for="name">Enter Your Last Name</label>
+            <input
+              class="last-input"
+              type="email"
+              name=""
+              id="email"
+              placeholder=" "
+            />
+            <label class="last-label3" for="email">Enter Your Email</label>
             <input type="number" name="" id="" placeholder="(+1)000000000" />
-            <input type="text" placeholder="Enter Your Businesss Name" />
-            <input type="text" placeholder="Choose Your amount of Employees" />
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="./img/americ.svg" alt="" />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <button class="dropdown-item" type="button">
+                    <img src="./img/americ.svg" alt="" />
+                    <span>United States</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">
+                    <img src="./img/icons8-belarus-24.png" alt="" />
+                    <span>Belarus</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button">
+                    <img src="./img/icons8-russia-24.png" alt="" />
+                    <span>Russia</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <input id="name" class="last-input" type="text" placeholder=" " />
+            <label class="last-label4" for="name"
+              >Enter Your Businesss Name</label
+            >
+            <input id="amount" class="last-input" type="text" placeholder=" " />
+            <label class="last-label5" for="amount"
+              >Choose Your amount of Employees</label
+            >
             <input type="button" value="Contact Us" />
             <p class="btn-text">
               *By clicking you agree to the processing of personal data
@@ -373,6 +424,15 @@
           </li>
         </ul>
       </div>
+      <div class="input__block">
+        <input type="text" id="nick" placeholder=" " />
+        <label for="nick">Hello</label>
+      </div>
     </div>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
 </html>

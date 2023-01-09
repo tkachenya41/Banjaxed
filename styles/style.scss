@@ -737,11 +737,10 @@ $head: #1a1a29;
       flex: 1;
     }
     input[type="number"] {
-      padding: 23px 48px;
-      background: url(../img/america.svg) 3% center no-repeat;
+      padding: 23px 48px 23px 80px;
     }
-    .last__form input:nth-child(5),
-    .last__form input:nth-child(6) {
+    .last__form input:nth-of-type(5),
+    .last__form input:nth-of-type(6) {
       flex: 1 1 100%;
     }
     .btn-text {
@@ -753,9 +752,79 @@ $head: #1a1a29;
         #7274a0
       );
     }
-    .last__form input:nth-child(6) {
+    .last__form input:nth-of-type(6) {
       margin-bottom: calc((51px / 610px) * 100%);
     }
+    .last__form {
+      position: relative;
+    }
+    .last__form label {
+      @include font(
+        "Hepta Slab",
+        500,
+        calc(8px + 0.1vw),
+        calc(10px + 0.1vw),
+        #7274a0
+      );
+      position: absolute;
+      transform: translateY(200%);
+      background-color: #ffffff;
+      padding: 0 20px;
+      transition: 0.3s ease-in-out;
+      pointer-events: none;
+    }
+    .last-label1 {
+      top: 0;
+      left: 5px;
+    }
+    .last-label2 {
+      top: 0;
+      right: 140px;
+    }
+    .last-label3 {
+      top: 17%;
+      left: 5px;
+    }
+    .last-label4 {
+      top: 35%;
+      left: 5px;
+    }
+    .last-label5 {
+      top: 52%;
+      left: 5px;
+    }
+  }
+  .last-input:focus + .last-label1,
+  .last-input:not(:placeholder-shown) + .last-label1,
+  .last-input:focus + .last-label2,
+  .last-input:not(:placeholder-shown) + .last-label2,
+  .last-input:focus + .last-label3,
+  .last-input:not(:placeholder-shown) + .last-label3,
+  .last-input:focus + .last-label4,
+  .last-input:not(:placeholder-shown) + .last-label4,
+  .last-input:focus + .last-label5,
+  .last-input:not(:placeholder-shown) + .last-label5 {
+    transform: translateY(0%);
+  }
+  .dropdown {
+    position: absolute;
+    right: 37%;
+    top: 20%;
+  }
+  .btn {
+    --bs-btn-padding-x: 2px;
+    --bs-btn-padding-y: 8px;
+    border: none;
+    background-color: transparent;
+    color: black;
+  }
+  .btn:hover {
+    color: black;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .btn-secondary {
+    --bs-btn-active-bg: transparent;
   }
   .footer {
     padding-top: calc((26px / 1504px) * 100%);
@@ -831,6 +900,41 @@ $head: #1a1a29;
       margin-right: calc((425px / 1504px) * 100%);
       gap: 74px;
       @include font("Hepta Slab", 300, calc(10px + 0.2vw), 27px, $text);
+    }
+  }
+  .input__block {
+    position: relative;
+    input,
+    label {
+      @include font(
+        "Hepta Slab",
+        600,
+        calc(14px + 0.2vw),
+        calc(25px + 0.2vw),
+        $head
+      );
+    }
+    input {
+      width: 300px;
+      border: 2px solid black;
+    }
+    label {
+      position: absolute;
+      transform: translateY(-50%);
+      transform-origin: left center;
+      top: 50%;
+      left: 30px;
+      transition: 0.3s linear;
+      opacity: 0.5;
+      pointer-events: none;
+      background-color: #ffffff;
+      padding: 2px;
+    }
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: 0;
+      transform: translateY(-50%) scale(0.5) translateX(10px);
+      opacity: 1;
     }
   }
 }
