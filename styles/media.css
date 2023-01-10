@@ -1,19 +1,12 @@
 @media (max-width: 1230px) {
-  .first__block {
-    justify-content: center;
-    text-align: center;
-  }
-  .first__block .first__btns {
-    justify-content: center;
-  }
   .first__block .first-square {
     display: none;
   }
   .first__block .first__images {
-    padding-left: 50%;
-    padding-bottom: 50%;
+    padding-left: 35%;
+    padding-bottom: 35%;
     margin-top: 0;
-    background: url(../img/mobile-bg1.svg) center / contain no-repeat;
+    background: url(../img/mobile-bg1.svg) center / 100% no-repeat;
   }
   .first__block .first-dots {
     left: -20%;
@@ -27,6 +20,9 @@
   }
 }
 @media (max-width: 1184px) {
+  .first__block {
+    margin-bottom: 20px;
+  }
   .third__block {
     gap: 20px;
     justify-content: center;
@@ -57,12 +53,56 @@
   }
 }
 @media (max-width: 900px) {
+  .header .header-content {
+    display: none;
+  }
+  .first__block {
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .first__block .first__btns {
+    justify-content: center;
+  }
+  .first__block .first__images {
+    padding-left: 100%;
+    padding-bottom: 100%;
+  }
+  .second__block .second__content {
+    justify-content: center;
+  }
+  .second__block .second__text-block {
+    justify-content: center;
+  }
+  .second__block .second-management,
+  .second__block .second-development,
+  .second__block .second-admin,
+  .second__block .second-architecture {
+  }
+
+  .second__block .second-management .second__text-block,
+  .second__block .second-admin .second__text-block {
+    background: url(../img/mob-left.svg) left 30% no-repeat;
+    background-size: contain;
+    padding: 10px 20px;
+  }
+  .second__block .second-architecture .second__text-block,
+  .second__block .second-development .second__text-block {
+    background: url(../img/mob-right.svg) left 20% no-repeat;
+    background-size: contain;
+    padding: 10px 0 10px 50px;
+  }
+  .second-img {
+    width: 100px;
+  }
   .third__block .column2,
   .third__block .column3 {
     display: none;
   }
   .second__block .second-management,
-  .second__block .second-development {
+  .second__block .second-development,
+  .second__block .second-admin,
+  .second__block .second-architecture {
     margin-bottom: 0;
   }
   ._container .fourth__block .fourth__content {
@@ -74,16 +114,14 @@
     background: url(../img/Conversations.svg) 7% 2%/ 20% no-repeat;
   }
   ._container .fourth__block .fourth-bg {
-    background: url(../img/smaill__frame.svg) right top/50% 85% no-repeat,
+    padding-bottom: 60%;
+    padding-right: 80%;
+    background: url(../img/smaill__frame.svg) right top/50% 60% no-repeat,
       url(../img/big_frame.svg) center bottom/contain no-repeat,
       url(../img/planet.svg) right / contain no-repeat;
   }
 }
 @media (max-width: 768px) {
-  .first__block .first__images {
-    padding-left: 90%;
-    padding-bottom: 90%;
-  }
   .first__block .first__btn {
     padding: 2% 5%;
   }
@@ -103,9 +141,6 @@
   }
 }
 @media (max-width: 638px) {
-  .header .header-content {
-    display: none;
-  }
   .first__block .first__btns {
     justify-content: center;
   }
@@ -139,21 +174,21 @@
   }
 }
 @media (max-width: 475px) {
+  .first__block {
+    justify-content: flex-start;
+    text-align: left;
+  }
   .watch {
     margin-left: 18px;
   }
-
+  .watch::before {
+    bottom: 25%;
+  }
   .first__link {
     display: none;
   }
   .second__block .second__content-header {
     min-width: auto;
-  }
-  .second__block .second__text-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: unset;
   }
   ._container .fifth__block .average__page {
     flex: 1 1 auto;

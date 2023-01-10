@@ -120,10 +120,10 @@ $head: #1a1a29;
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 
   .first__content {
     margin-top: calc((196px / 1504px) * 100%);
+    padding-right: 10px;
   }
   .first__header {
     @include font(
@@ -184,6 +184,7 @@ $head: #1a1a29;
   padding-bottom: calc((121px / 1206px) * 100%);
   border-bottom: 1px solid #e0e2fc;
   .second__header {
+    white-space: nowrap;
     max-width: 610px;
     margin: 0 auto;
     text-align: center;
@@ -198,7 +199,7 @@ $head: #1a1a29;
   }
   .second__text {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     text-align: center;
     @include font(
       "Hepta Slab",
@@ -214,52 +215,50 @@ $head: #1a1a29;
   .second__content {
     background: url(../img/Vector.svg) center 120px no-repeat,
       url(https://www.banjaxed.com/wp-content/themes/banjaxed/assets/images/salesforce-img.png)
-        center 60px no-repeat;
+        center 50px no-repeat;
   }
-
+  .second__text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
   .second__content-header {
-    min-width: 285px;
+    white-space: nowrap;
     @include font(
       "Hepta Slab",
       500,
-      calc(14px + 0.4vw),
+      calc(8px + 0.7vw),
       calc(17px + 0.5vw),
       $head
     );
     margin-bottom: 12px;
   }
   .second__content-text {
+    max-height: 78px;
     max-width: 285px;
     @include font(
       "Hepta Slab",
       300,
-      calc(9px + 0.3vw),
-      calc(16px + 0.3vw),
-      $text
+      calc(6px + 0.7vw),
+      calc(8px + 0.7vw),
+      #7274a0
     );
   }
   .second__content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   .second-management,
   .second-development,
   .second-admin,
   .second-architecture {
     display: flex;
-    flex: 1;
-  }
-  .second-management,
-  .second-development {
-    margin-bottom: 70px;
+    margin-bottom: 100px;
   }
   .second-architecture,
   .second-development {
     justify-content: end;
-  }
-  .second__text-block {
-    position: relative;
-    top: 90px;
   }
 }
 //---------------------------Third Block-----------------------------------------------------
@@ -269,11 +268,16 @@ $head: #1a1a29;
   justify-content: space-between;
   flex-wrap: wrap;
   .third-text {
+    b,
+    strong {
+      font-weight: bold;
+    }
+    margin-bottom: 0;
     max-width: 822px;
     @include font(
       "Hepta Slab",
       300,
-      calc(25px + 0.3vw),
+      calc(24px + 0.3vw),
       calc(33px + 0.4vw),
       $text
     );
@@ -281,7 +285,7 @@ $head: #1a1a29;
   .third-content {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 10px;
     width: 25%;
   }
   .column1,
@@ -336,7 +340,7 @@ $head: #1a1a29;
       );
     }
     .fourth-text {
-      margin-bottom: 32px;
+      margin-bottom: 10%;
       max-width: 425px;
       @include font(
         "Hepta Slab",
@@ -347,7 +351,8 @@ $head: #1a1a29;
       );
     }
     .fourth-list {
-      margin-bottom: 57px;
+      padding: 0;
+      margin-bottom: 10%;
       display: flex;
       flex-direction: column;
       gap: 7px;
@@ -895,9 +900,10 @@ $head: #1a1a29;
   }
   .last__footer {
     .header-list {
+      padding-left: 0;
       display: flex;
       justify-content: center;
-      margin-right: calc((425px / 1504px) * 100%);
+      margin-right: calc((530px / 1504px) * 100%);
       gap: 74px;
       @include font("Hepta Slab", 300, calc(10px + 0.2vw), 27px, $text);
     }

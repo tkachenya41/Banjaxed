@@ -114,10 +114,10 @@ body {
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 .first__block .first__content {
   margin-top: 13.0319148936%;
+  padding-right: 10px;
 }
 .first__block .first__header {
   font-family: "Hepta Slab";
@@ -171,6 +171,7 @@ body {
   border-bottom: 1px solid #e0e2fc;
 }
 .second__block .second__header {
+  white-space: nowrap;
   max-width: 610px;
   margin: 0 auto;
   text-align: center;
@@ -183,7 +184,7 @@ body {
 }
 .second__block .second__text {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   text-align: center;
   font-family: "Hepta Slab";
   font-weight: 300;
@@ -195,47 +196,46 @@ body {
   color: #6670ee;
 }
 .second__block .second__content {
-  background: url(../img/Vector.svg) center 120px no-repeat, url(https://www.banjaxed.com/wp-content/themes/banjaxed/assets/images/salesforce-img.png) center 60px no-repeat;
+  background: url(../img/Vector.svg) center 120px no-repeat, url(https://www.banjaxed.com/wp-content/themes/banjaxed/assets/images/salesforce-img.png) center 50px no-repeat;
+}
+.second__block .second__text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 .second__block .second__content-header {
-  min-width: 285px;
+  white-space: nowrap;
   font-family: "Hepta Slab";
   font-weight: 500;
-  font-size: calc(14px + 0.4vw);
+  font-size: calc(8px + 0.7vw);
   line-height: calc(17px + 0.5vw);
   color: #1a1a29;
   margin-bottom: 12px;
 }
 .second__block .second__content-text {
+  max-height: 78px;
   max-width: 285px;
   font-family: "Hepta Slab";
   font-weight: 300;
-  font-size: calc(9px + 0.3vw);
-  line-height: calc(16px + 0.3vw);
-  color: #3f415c;
+  font-size: calc(6px + 0.7vw);
+  line-height: calc(8px + 0.7vw);
+  color: #7274a0;
 }
 .second__block .second__content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .second__block .second-management,
 .second__block .second-development,
 .second__block .second-admin,
 .second__block .second-architecture {
   display: flex;
-  flex: 1;
-}
-.second__block .second-management,
-.second__block .second-development {
-  margin-bottom: 70px;
+  margin-bottom: 100px;
 }
 .second__block .second-architecture,
 .second__block .second-development {
   justify-content: end;
-}
-.second__block .second__text-block {
-  position: relative;
-  top: 90px;
 }
 
 .third__block {
@@ -245,17 +245,22 @@ body {
   flex-wrap: wrap;
 }
 .third__block .third-text {
+  margin-bottom: 0;
   max-width: 822px;
   font-family: "Hepta Slab";
   font-weight: 300;
-  font-size: calc(25px + 0.3vw);
+  font-size: calc(24px + 0.3vw);
   line-height: calc(33px + 0.4vw);
   color: #3f415c;
+}
+.third__block .third-text b,
+.third__block .third-text strong {
+  font-weight: bold;
 }
 .third__block .third-content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 10px;
   width: 25%;
 }
 .third__block .column1,
@@ -313,7 +318,7 @@ body {
   color: #1a1a29;
 }
 ._container .fourth__block .fourth-text {
-  margin-bottom: 32px;
+  margin-bottom: 10%;
   max-width: 425px;
   font-family: "Hepta Slab";
   font-weight: 300;
@@ -322,7 +327,8 @@ body {
   color: #3f415c;
 }
 ._container .fourth__block .fourth-list {
-  margin-bottom: 57px;
+  padding: 0;
+  margin-bottom: 10%;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -805,9 +811,10 @@ body {
   border-radius: 12px;
 }
 ._container .last__footer .header-list {
+  padding-left: 0;
   display: flex;
   justify-content: center;
-  margin-right: 28.2579787234%;
+  margin-right: 35.2393617021%;
   gap: 74px;
   font-family: "Hepta Slab";
   font-weight: 300;
