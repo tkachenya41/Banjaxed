@@ -3,6 +3,9 @@
     justify-content: center;
     text-align: center;
   }
+  .first__block .first__btns {
+    justify-content: center;
+  }
   .first__block .first-square {
     display: none;
   }
@@ -81,6 +84,9 @@
     padding-left: 90%;
     padding-bottom: 90%;
   }
+  .first__block .first__btn {
+    padding: 2% 5%;
+  }
   ._container .seventh__block {
     justify-content: center;
     gap: 20px;
@@ -154,6 +160,23 @@
   }
   ._container .fifth__block .exceptional-list {
     padding: 20px 20px;
+  }
+  ._container .last__block .last-label3 {
+    top: 15%;
+  }
+  ._container .dropdown {
+    left: 2%;
+    top: 31%;
+    right: auto;
+  }
+  ._container .last__block .last-label4 {
+    top: 43%;
+  }
+  ._container .last__block .last-label5 {
+    top: 57%;
+  }
+  ._container .last__block .last__form label {
+    padding: 0 3px;
   }
   ._container .last__block .btn-text {
     text-align: center;

@@ -655,7 +655,7 @@ body {
   flex: 1;
 }
 ._container .last__block input[type=number] {
-  padding: 23px 48px 23px 80px;
+  padding: 23px 48px 23px 60px;
 }
 ._container .last__block .last__form input:nth-of-type(5),
 ._container .last__block .last__form input:nth-of-type(6) {
@@ -677,35 +677,35 @@ body {
 ._container .last__block .last__form label {
   font-family: "Hepta Slab";
   font-weight: 500;
-  font-size: calc(8px + 0.1vw);
+  font-size: calc(8px + 0.3vw);
   line-height: calc(10px + 0.1vw);
   color: #7274a0;
   position: absolute;
   transform: translateY(200%);
   background-color: #ffffff;
-  padding: 0 20px;
+  padding: 0 10px;
   transition: 0.3s ease-in-out;
   pointer-events: none;
 }
 ._container .last__block .last-label1 {
   top: 0;
-  left: 5px;
+  left: 1.5%;
 }
 ._container .last__block .last-label2 {
   top: 0;
-  right: 140px;
+  left: 52%;
 }
 ._container .last__block .last-label3 {
   top: 17%;
-  left: 5px;
+  left: 1.5%;
 }
 ._container .last__block .last-label4 {
   top: 35%;
-  left: 5px;
+  left: 1.5%;
 }
 ._container .last__block .last-label5 {
   top: 52%;
-  left: 5px;
+  left: 1.5%;
 }
 ._container .last-input:not(:-moz-placeholder-shown) + .last-label1, ._container .last-input:not(:-moz-placeholder-shown) + .last-label2, ._container .last-input:not(:-moz-placeholder-shown) + .last-label3, ._container .last-input:not(:-moz-placeholder-shown) + .last-label4, ._container .last-input:not(:-moz-placeholder-shown) + .last-label5 {
   transform: translateY(0%);
@@ -727,7 +727,7 @@ body {
 }
 ._container .dropdown {
   position: absolute;
-  right: 37%;
+  right: 40%;
   top: 20%;
 }
 ._container .btn {
@@ -814,47 +814,4 @@ body {
   font-size: calc(10px + 0.2vw);
   line-height: 27px;
   color: #3f415c;
-}
-._container .input__block {
-  position: relative;
-}
-._container .input__block input,
-._container .input__block label {
-  font-family: "Hepta Slab";
-  font-weight: 600;
-  font-size: calc(14px + 0.2vw);
-  line-height: calc(25px + 0.2vw);
-  color: #1a1a29;
-}
-._container .input__block input {
-  width: 300px;
-  border: 2px solid black;
-}
-._container .input__block label {
-  position: absolute;
-  transform: translateY(-50%);
-  transform-origin: left center;
-  top: 50%;
-  left: 30px;
-  transition: 0.3s linear;
-  opacity: 0.5;
-  pointer-events: none;
-  background-color: #ffffff;
-  padding: 2px;
-}
-._container .input__block input:not(:-moz-placeholder-shown) + label {
-  top: 0;
-  transform: translateY(-50%) scale(0.5) translateX(10px);
-  opacity: 1;
-}
-._container .input__block input:not(:-ms-input-placeholder) + label {
-  top: 0;
-  transform: translateY(-50%) scale(0.5) translateX(10px);
-  opacity: 1;
-}
-._container .input__block input:focus + label,
-._container .input__block input:not(:placeholder-shown) + label {
-  top: 0;
-  transform: translateY(-50%) scale(0.5) translateX(10px);
-  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

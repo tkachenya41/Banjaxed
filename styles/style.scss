@@ -737,7 +737,7 @@ $head: #1a1a29;
       flex: 1;
     }
     input[type="number"] {
-      padding: 23px 48px 23px 80px;
+      padding: 23px 48px 23px 60px;
     }
     .last__form input:nth-of-type(5),
     .last__form input:nth-of-type(6) {
@@ -762,36 +762,36 @@ $head: #1a1a29;
       @include font(
         "Hepta Slab",
         500,
-        calc(8px + 0.1vw),
+        calc(8px + 0.3vw),
         calc(10px + 0.1vw),
         #7274a0
       );
       position: absolute;
       transform: translateY(200%);
       background-color: #ffffff;
-      padding: 0 20px;
+      padding: 0 10px;
       transition: 0.3s ease-in-out;
       pointer-events: none;
     }
     .last-label1 {
       top: 0;
-      left: 5px;
+      left: 1.5%;
     }
     .last-label2 {
       top: 0;
-      right: 140px;
+      left: 52%;
     }
     .last-label3 {
       top: 17%;
-      left: 5px;
+      left: 1.5%;
     }
     .last-label4 {
       top: 35%;
-      left: 5px;
+      left: 1.5%;
     }
     .last-label5 {
       top: 52%;
-      left: 5px;
+      left: 1.5%;
     }
   }
   .last-input:focus + .last-label1,
@@ -808,7 +808,7 @@ $head: #1a1a29;
   }
   .dropdown {
     position: absolute;
-    right: 37%;
+    right: 40%;
     top: 20%;
   }
   .btn {
@@ -900,41 +900,6 @@ $head: #1a1a29;
       margin-right: calc((425px / 1504px) * 100%);
       gap: 74px;
       @include font("Hepta Slab", 300, calc(10px + 0.2vw), 27px, $text);
-    }
-  }
-  .input__block {
-    position: relative;
-    input,
-    label {
-      @include font(
-        "Hepta Slab",
-        600,
-        calc(14px + 0.2vw),
-        calc(25px + 0.2vw),
-        $head
-      );
-    }
-    input {
-      width: 300px;
-      border: 2px solid black;
-    }
-    label {
-      position: absolute;
-      transform: translateY(-50%);
-      transform-origin: left center;
-      top: 50%;
-      left: 30px;
-      transition: 0.3s linear;
-      opacity: 0.5;
-      pointer-events: none;
-      background-color: #ffffff;
-      padding: 2px;
-    }
-    input:focus + label,
-    input:not(:placeholder-shown) + label {
-      top: 0;
-      transform: translateY(-50%) scale(0.5) translateX(10px);
-      opacity: 1;
     }
   }
 }
